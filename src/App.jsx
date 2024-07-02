@@ -8,6 +8,7 @@ import Index from "./pages/Index.jsx";
 import Courses from "./pages/Courses.jsx";
 import Profile from "./pages/Profile.jsx";
 import SettingsPage from "./pages/Settings.jsx";
+import CodeEditor from "./pages/CodeEditor.jsx";
 
 const queryClient = new QueryClient();
 
@@ -17,7 +18,7 @@ export const navItems = [
     to: "/",
     icon: <Home className="h-4 w-4" />,
   },
-{
+  {
     title: "Courses",
     to: "/courses",
     icon: <BookOpen className="h-4 w-4" />,
@@ -46,6 +47,7 @@ const App = () => {
               <Route path="courses" element={<Courses />} />
               <Route path="profile" element={<Profile />} />
               <Route path="settings" element={<SettingsPage />} />
+              <Route path="code-editor" element={<CodeEditor />} />
             </Route>
           </Routes>
         </Router>
